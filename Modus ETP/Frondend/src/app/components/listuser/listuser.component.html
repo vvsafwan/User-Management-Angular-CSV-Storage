@@ -1,0 +1,67 @@
+<div class="listuser">
+    <div style="position: fixed; width: 100%; z-index: 5;">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="flex justify-center items-center w-full" style="height: 100vh;">
+        
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                    Email
+                </th>
+                <th scope="col" class="px-6 py-3 dark:bg-white">
+                    First Name
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                    Last Name
+                </th>
+                <th scope="col" class="px-6 py-3 dark:bg-white">
+                    Mobile
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                    Address
+                </th>
+                <th scope="col" class="px-6 py-3 dark:bg-white">
+                    Edit User
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                    Delete User
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200 dark:border-gray-700" *ngFor="let user of users">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                    {{ user.email }}
+                </th>
+                <td class="px-6 py-4 dark:bg-white">
+                    {{ user.firstname }}
+                </td>
+                <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                    {{ user.lastname}}
+                </td>
+                <td class="px-6 py-4 dark:bg-white">
+                    {{ user.mobile }}
+                </td>
+                <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                    {{ user.address }}
+                </td>
+                <td class="px-6 py-4 dark:bg-white">
+                    <button (click)="editUser(user.email)" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+                    Edit
+                    </button>
+                </td>
+                <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                    <button (click)="deleteUser(user.email)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    </div>
+</div>

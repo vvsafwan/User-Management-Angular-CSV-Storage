@@ -1,0 +1,8 @@
+.adduser{
+    background: url('../../../assets/homeImg2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: max-content;
+}

@@ -1,0 +1,8 @@
+.home{
+    background: url('../../../assets/edituserbgimg.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: max-content;
+}
